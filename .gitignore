@@ -40,3 +40,6 @@ build/
 
 ### Properties ###
 config.properties
+
+### Intellij idea config ###
+.idea
