@@ -34,24 +34,38 @@ CourseEnrollmentAPI/
 ---
 
 ## ⚙️ Setup Instructions
-
 1. **Clone the repository**
 ```bash
 git clone https://github.com/yallav/course-enrollment-api.git
 cd course-enrollment-api
 ```
 2. **Install Latest Java**
-3. **Build project with Maven**
+3. **Configure maven build tool**
+
+## 📝 Sample Test Flow
+1. Login as student → get auth token
+2. List courses by title, instructor, and course code
+3. Check the availability
+4. Enroll to a course
+5. Drop from a course
+
+## 🔧 Configuration
+Create the config.properties under src/test/resources
+```bash
+# Student credentials
+student.username=student01
+student.password=password123
+
+# Instructor credentials
+instructor.username=instructor01
+instructor.password=password123
+```
+## ▶️ Running Tests
+1. **Build project with Maven**
 ```bash
 mvn clean install
 ```
-4. **Run tests**
+2. **Run tests**
 ```bash
 mvn test
 ```
-## 📝 Sample Test Flow
-1. Login as student → get auth token 
-2. List courses by title, instructor, and course code 
-3. Check the availability 
-4. Enroll to a course
-5. Drop from a course
