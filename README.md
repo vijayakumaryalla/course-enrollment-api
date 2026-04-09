@@ -29,7 +29,7 @@ cd course-enrollment-api
 3. **Configure maven build tool**
 
 ## 📝 Sample Test Flow
-### Student Journey End-to-End Flow
+### Student Journey End-to-End Flow 
 1. Login as student → get auth token
 2. List courses by title, instructor, and course code
 3. Check the availability
