@@ -50,9 +50,9 @@ student.password=passwor$terbd123
 instructor.username=instrerductor01
 instructor.password=passwoS$%vsdfgrd123
 ```
-1. **Build project with Maven**
+1. **Clean the project with Maven**
 ```bash
-mvn clean install
+mvn clean
 ```
 2. **Run tests**
 ```bash
@@ -68,9 +68,9 @@ SET INSTRUCTOR_USERNAME=instrerductor01
 SET INSTRUCTOR_PASSWORD=passwoS$%vsdfgrd123
 echo %STUDENT_USERNAME%
 ```
-2. **Build project with Maven**
+2. **Clean the project with Maven**
 ```bash
-mvn clean install
+mvn clean
 ```
 3. **Run tests**
 ```bash

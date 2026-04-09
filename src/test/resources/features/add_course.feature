@@ -1,5 +1,5 @@
 Feature: Add course
-  As an instructor, I want to login, and add new view courses
+  As an instructor, I want to login, and add new courses in the system
 
   Background:
     Given the instructor has valid credentials

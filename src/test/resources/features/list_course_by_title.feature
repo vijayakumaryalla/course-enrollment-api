@@ -1,4 +1,5 @@
 Feature: List Course By Title API Testing
+  As a student, I want to login, and list the course by title
 
   Background:
     Given the student has valid credentials
