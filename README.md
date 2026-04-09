@@ -16,21 +16,7 @@ It is built using **Java (latest), Maven**, and **RestAssured** for API testing.
 ---
 
 ## 📁 Project Structure
-CourseEnrollmentAPI/
-│
-├─ src/main/java/
-├─ src/test
-|    /java/
-|       ├─ org.dwp.ces.models/ # POJOs for API request and responses
-│       ├─ org.dwp.ces.utils/ # Utility classes (e.g., UniqueStringGenerator)
-|       ├─ runner/ # Utility classes (e.g., UniqueStringGenerator)
-│       ├─ stepdefinitions/ # Test classes (AddCourse, DeleteCourse, ListCourses)
-│   /resources/
-|   ├─ features/ # Test classes (AddCourse)
-|   ├─ config.properties
-├─ pom.xml # Maven configuration
-└─ README.md
-
+![img.png](img.png)
 ---
 
 ## ⚙️ Setup Instructions
@@ -49,23 +35,44 @@ cd course-enrollment-api
 4. Enroll to a course
 5. Drop from a course
 
-## 🔧 Configuration
+
+## ▶️ Running Tests
+
+### In local with 'config.properties'
+#### 🔧 Configuration
 Create the config.properties under src/test/resources
 ```bash
 # Student credentials
-student.username=student01
-student.password=password123
+student.username=studewsqant01
+student.password=passwor$terbd123
 
 # Instructor credentials
-instructor.username=instructor01
-instructor.password=password123
+instructor.username=instrerductor01
+instructor.password=passwoS$%vsdfgrd123
 ```
-## ▶️ Running Tests
 1. **Build project with Maven**
 ```bash
 mvn clean install
 ```
 2. **Run tests**
+```bash
+mvn test
+```
+### In local with environment variables
+⚠️ NOTE: The following commands must be executed in the same terminal session.
+1. Setup environment variables on Windows
+```bash
+SET STUDENT_USERNAME=studewsqant01
+SET STUDENT_PASSWORD=passwor$terbd123
+SET INSTRUCTOR_USERNAME=instrerductor01
+SET INSTRUCTOR_PASSWORD=passwoS$%vsdfgrd123
+echo %STUDENT_USERNAME%
+```
+2. **Build project with Maven**
+```bash
+mvn clean install
+```
+3. **Run tests**
 ```bash
 mvn test
 ```

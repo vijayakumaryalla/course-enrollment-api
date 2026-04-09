@@ -3,13 +3,10 @@ package org.dwp.ces.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.Instant;
-import java.util.Date;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Course {
-
     private String title;
     private String instructor;
     private String courseCode;

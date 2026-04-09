@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class EnrolmentJson {
-
     private String username;
     private String courseCode;
     private String courseTitle;

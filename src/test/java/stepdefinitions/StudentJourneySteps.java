@@ -19,7 +19,6 @@ public class StudentJourneySteps {
     private Response response;
     private Course course;
     private EnrollCourseRequest courseEnrollRequest;
-    private DropCourseRequest dropCourseRequest;
     private List<Course> courses;
 
     private static final String BASE_URL = "https://courseenrollmentapimanagementsystem.onrender.com";
@@ -140,7 +139,7 @@ public class StudentJourneySteps {
     public void enrollCourse(String courseCode) {
         String username = ConfigUtil.get("student.username");
         courseEnrollRequest = new EnrollCourseRequest();
-        courseEnrollRequest.setStudent(username);
+        courseEnrollRequest.setUsername(username);
         courseEnrollRequest.setCourseCode(courseCode);
 
         response =
@@ -177,8 +176,8 @@ public class StudentJourneySteps {
     @When("the student drops course code {string}")
     public void dropCourse(String courseCode) {
         String username = ConfigUtil.get("student.username");
-        dropCourseRequest = new DropCourseRequest();
-        dropCourseRequest.setStudent(username);
+        DropCourseRequest dropCourseRequest = new DropCourseRequest();
+        dropCourseRequest.setUsername(username);
         dropCourseRequest.setCourseCode(courseCode);
 
         response =

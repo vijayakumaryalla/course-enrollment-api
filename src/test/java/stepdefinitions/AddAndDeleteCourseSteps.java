@@ -42,7 +42,7 @@ public class AddAndDeleteCourseSteps {
     @When("the instructor logs in")
     public void instructorLogsIn() {
 
-        LoginRequest requestBody = new LoginRequest(
+        LoginRequest loginrRequestBody = new LoginRequest(
                 ConfigUtil.get("instructor.username"),
                 ConfigUtil.get("instructor.password")
         );
@@ -50,7 +50,7 @@ public class AddAndDeleteCourseSteps {
         response =
                 given()
                         .contentType("application/json")
-                        .body(requestBody)
+                        .body(loginrRequestBody)
                         .when()
                         .post("/instructor/login")
                         .then()
@@ -125,7 +125,6 @@ public class AddAndDeleteCourseSteps {
 
         // Filter courses by instructor
         courses = response.jsonPath().getList("findAll { it.instructor == '" + instructorId + "' }");
-        System.out.println("Courses owned by instructor: " + courses.size());
     }
 
     @When("delete one course randomly")
