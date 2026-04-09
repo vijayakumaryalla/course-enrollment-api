@@ -22,7 +22,7 @@ It is built using **Java (latest), Maven**, and **RestAssured** for API testing.
 ## ⚙️ Setup Instructions
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yallav/course-enrollment-api.git
+git clone https://github.com/vijayakumaryalla/course-enrollment-api.git
 cd course-enrollment-api
 ```
 2. **Install Latest Java**
